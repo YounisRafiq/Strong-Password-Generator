@@ -4,68 +4,103 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+
 body {
   background: #020024;
-}
-.head {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 300px;
-  height: 100vh;
-  flex-direction: column;
-  margin-left: 14%;
+  min-height: 100vh;
+  padding: 20px;
 }
+
+.head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: transparent;
+  width: 100%;
+  max-width: 500px;
+}
+
 .head h1 {
   color: #fcfcfc;
-  font-size: 34px;
+  font-size: clamp(24px, 5vw, 34px);
+  text-align: center;
 }
+
 span {
   color: rgb(5, 159, 67);
   position: relative;
   top: 10px;
   font-weight: 300;
 }
-.line{
-    width: 285px;
-    height: 3px;
-    background-color: rgb(5, 159, 67);
-    margin-top: 23px;
+
+.line {
+  width: 100%;
+  max-width: 300px;
+  height: 3px;
+  background-color: rgb(5, 159, 67);
+  margin-top: 23px;
 }
-.next{
-    width: 100%;
+
+.next {
+  width: 100%;
+  position: relative;
+  margin-top: 30px;
 }
-.next input{
-    margin-top: 30px;
-    width: 400px;
-    padding: 15px;
-    border: none;
-    outline: none;
-    border-radius: 2px;
-    font-size: 17px;
-    margin-left: 6px;
+
+.next input {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  outline: none;
+  border-radius: 2px;
+  font-size: 17px;
 }
-.fa-copy{
-    position: relative;
-    left: 23rem;
-    bottom: 34.5px;
-    color: rgb(5, 159, 67);
-    font-size: 20px;
-    cursor: pointer;
+
+.fa-copy {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgb(5, 159, 67);
+  font-size: 20px;
+  cursor: pointer;
 }
-#Btn{
-    width: 80%;
-    padding: 13px 0;
-    margin-right: 50px;
-    background-color: rgba(5, 159, 67, 0.892);
-    border: none;
-    color: #e1dddd;
-    border-radius: 3px;
-    font-size: 17px;
-    cursor: pointer;
+
+#Btn {
+  width: 100%;
+  max-width: 300px;
+  padding: 13px 0;
+  margin-top: 20px;
+  background-color: rgba(5, 159, 67, 0.892);
+  border: none;
+  color: #e1dddd;
+  border-radius: 3px;
+  font-size: 17px;
+  cursor: pointer;
 }
-.fa-bolt{
-    position: relative;
-    right: 15px;
-    font-size: 20px;
+
+.fa-bolt {
+  position: relative;
+  right: 5px;
+  font-size: 20px;
+}
+
+/* Make it look good on very small screens */
+@media (max-width: 400px) {
+  .head h1 {
+    font-size: 22px;
+  }
+
+  .next input {
+    font-size: 15px;
+    padding: 12px;
+  }
+
+  #Btn {
+    font-size: 15px;
+    padding: 10px 0;
+  }
 }
